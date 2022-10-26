@@ -50,14 +50,14 @@ while True:
         #Enable to help with debugging
         #print("Left top co-ordinates - ", left,", ",top)
         #print("Bottom right co-ordinates - ", bottom,", ",right)
-        time.sleep(0.5)
+        
         
         msg = {
             'x' : midpoint_x,
             'y' : midpoint_y
         }
         mqtt.publish(f'/face/{i}/', json.dumps(msg))
-     
+        time.sleep(0.5)
 
     
     # display the image to our screen
