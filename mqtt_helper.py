@@ -39,7 +39,10 @@ class Mqtt:
         try:
             payload = json.decode(msg.payload)
         except:
-            payload = msg.payload.decode()
+            payload = {
+                "topic" : msg.topic,
+                "payload" : msg.payload.decode()
+            }
         
         if msg.topic == '/state':
             payload = int(payload)
