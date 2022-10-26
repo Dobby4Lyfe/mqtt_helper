@@ -57,7 +57,8 @@ while True:
             'y' : midpoint_y
         }
         mqtt.publish(f'/face/{i}/', json.dumps(msg))
-        time.sleep(0.5)
+    
+    time.sleep(0.5)
 
     
     # display the image to our screen
