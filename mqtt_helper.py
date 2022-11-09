@@ -37,7 +37,7 @@ class Mqtt:
         print(msg.topic+ " " + msg.payload.decode())
 
         try:
-            payload = json.decode(msg.payload)
+            payload = json.loads(msg.payload)
         except:
             payload = {
                 "topic" : msg.topic,
